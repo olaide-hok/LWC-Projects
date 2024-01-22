@@ -1,0 +1,56 @@
+<template>
+    <!-- Cars List using for:each loop -->
+    <lightning-card title="for:each loop">
+      <div class="slds-var-m-around_medium">
+        <!-- Card Body  -->
+        <ul class="slds-has-dividers_around-space">
+            <template for:each={carsList} for:item="car">
+                <li  key={car} class="slds-item">{car}</li>              
+            </template>
+        </ul>
+      </div>
+    </lightning-card>
+
+    <!-- CEOs List using Iterators Loop -->
+    <lightning-card title="Iterator Loop">
+        <!-- Card Body  -->          
+        <div class="slds-var-m-around_medium">
+              <ul class="slds-has-dividers_around-space">
+                  <template iterator:ceo={ceosList}>
+                <li  key={ceo.value.id} class="slds-item">
+                    <template lwc:if={ceo.first}>
+                        <div class="slds-box slds-theme_shade">
+                        <strong>
+                            List of top companies and there CEOs:
+                        </strong>
+                        </div>
+                    </template>
+                    <div class="slds-item">
+                        <strong>{ceo.value.company} </strong>
+                        {ceo.value.name}
+                    </div>
+                    <template lwc:if={ceo.last}>
+                        <div class="slds-box slds-theme_shade">
+                        <strong>
+                            Thanks for reading this list.
+                        </strong>
+                        </div>
+                    </template>
+                </li>
+            </template>
+            </ul>
+        </div>
+      </lightning-card>
+
+    <!-- Cars List using for:each loop -->
+    <lightning-card title="for:each loop with array of object">
+        <div class="slds-var-m-around_medium">
+          <!-- Card Body  -->
+            <ul  class="slds-has-dividers_around-space">
+                <template for:each={ceosList} for:item="ceo">
+                  <li key={ceo.id} class="slds-item"> <strong>{ceo.company}</strong> {ceo.name}</li>              
+                </template>
+            </ul>
+        </div>
+      </lightning-card>
+</template>
