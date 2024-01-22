@@ -23,4 +23,9 @@ export default class P2cParentComponent extends LightningElement {
             href : "https://www.example.com"
         }
     ]
+
+    percentage = 10
+    changeHandler(event) {
+        this.percentage = event.target.value
+    }
 }
