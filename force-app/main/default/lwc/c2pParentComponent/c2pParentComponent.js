@@ -10,5 +10,6 @@ export default class C2pParentComponent extends LightningElement {
     closeHandler(event) {
         this.msg = event.detail
         this.showModal = false
+        console.log('finally close modal from bubbling event.')
     }
 }
