@@ -11,8 +11,13 @@ export default class LifeCycleParent extends LightningElement {
     renderedCallback() {
         console.log('parent rendered callback called!')
     }
-    name
-    changeHandler(event) {
-        this.name = event.target.value
-    }
+    // Example of instance that triggers and retriggers the connected callback lifecycle hook.
+    // name
+    // changeHandler(event) {
+    //     this.name = event.target.value
+    // }
+    isChildVisible = false;
+   handleClick () {
+    this.isChildVisible = !this.isChildVisible
+   }
 }
