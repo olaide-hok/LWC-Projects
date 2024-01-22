@@ -1,10 +1,15 @@
 <template>
+    <!-- Example of Parent to Child Communication using primitive data types. -->
     <c-p2c-alert-component message='Hurray!! I got the data'
     card-heading="Parent to Child primitive data communication"
     number=45 is-valid
     ></c-p2c-alert-component>
-
+    
     <div class="slds-var-m-bottom_medium"></div>
-
+    
+    <!-- Example of Parent to Child Communication using non-primitive data types. -->
     <c-p2c-carousel-component carousel-details={carouselDetails}></c-p2c-carousel-component>
+
+    <!-- Example of Parent to Child Communication on action at parent component. -->
+    <lightning-input type="number" label="Enter percentage"></lightning-input>
 </template>
