@@ -1,3 +1,23 @@
 <template>
-    
+    <lightning-card title="Slot Demo Parent Component">
+        <!-- Footer Absent -->
+        <div class="slds-var-p-around_medium">
+          <c-slot-child-demo>
+            <p class="slds-text-color_success" slot="fullName">My name is Habeeb Kareem.</p>
+            <p class="slds-text-color_error" slot="age">My age is 25.</p>
+            <p class="slds-text-color_default">My location is Maldives.</p>
+            <!-- <p slot="footer">I am a footer</p> -->
+          </c-slot-child-demo>
+        </div>
+
+        <!-- Footer Present -->
+        <div class="slds-var-p-around_medium">
+            <c-slot-child-demo>
+              <p class="slds-text-color_success" slot="fullName">My name is Habeeb Kareem.</p>
+              <p class="slds-text-color_error" slot="age">My age is 25.</p>
+              <p class="slds-text-color_default">My location is Maldives.</p>
+              <p slot="footer">I am a footer</p>
+            </c-slot-child-demo>
+          </div>
+      </lightning-card>    
 </template>
