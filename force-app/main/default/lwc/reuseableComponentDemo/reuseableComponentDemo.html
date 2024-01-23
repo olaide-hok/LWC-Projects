@@ -1,0 +1,59 @@
+<template>
+    <!-- <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Card Title
+      </div>
+      <div slot="actions">
+        <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+      </div>
+      <div slot="footer">
+        <h6>This is the footer</h6>
+      </div>
+      <div>
+        <h1>This is the body</h1>
+      </div>
+    </lightning-card> -->
+
+    <div class="slds-var-m-around_medium">
+        <c-custom-lightning-card>
+            <h1 slot="title">This is the title</h1>
+            <h1>This is the body for the custom lightning card.</h1>
+            <div slot="actions">
+                <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+              </div>
+              <div slot="footer">
+                <h6>This is the footer</h6>
+              </div>
+        </c-custom-lightning-card>        
+    </div>
+
+      <!-- Testing custom lightning card without footer -->
+    <div class="slds-var-m-around_medium">
+        <c-custom-lightning-card>
+            <h1 slot="title">This is the title</h1>
+            <h1>This is the body for the custom lightning card without footer.</h1>
+            <div slot="actions">
+                <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+              </div>
+        </c-custom-lightning-card>
+
+    </div>
+
+    <!-- Custom card without action -->
+    <div class="slds-var-m-around_medium">
+        <c-custom-lightning-card>
+            <h1 slot="title">This is the title</h1>
+            <h1>This is the body for the custom lightning card without actions.</h1>
+            <div slot="footer">
+                <h6>This is the footer</h6>
+            </div>
+        </c-custom-lightning-card>
+    </div>
+
+    <!-- Custom Lighning Card without footer and actions -->
+    <div class="slds-var-m-around_medium">
+        <c-custom-lightning-card>
+            <h1 slot="title">This is the title</h1>
+        </c-custom-lightning-card>
+    </div>    
+</template>
