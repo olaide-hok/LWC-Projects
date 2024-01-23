@@ -1,3 +1,17 @@
 <template>
-    
+    <lightning-card title="CSS Composition Parent Component">
+        <div class="slds-var-p-around_medium">
+            <h1>Hello! I am parent component.</h1>
+            <!-- Host Element -->
+            <c-css-child-demo>
+                <!-- This element passed to a child slot can only be styled in the parent component. i.e. here -->
+                <p>Hello! I am a styled slot A.</p>
+            </c-css-child-demo>
+            <!-- 2nd child with a different css -->
+            <c-css-child-demo class="black">
+                <!-- This element passed to a child slot can only be styled in the parent component. i.e. here -->
+                <p>Hello! I am a styled slot B.</p>
+            </c-css-child-demo>
+        </div>
+      </lightning-card>
 </template>

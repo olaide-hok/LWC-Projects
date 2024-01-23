@@ -1,0 +1,13 @@
+/* 3a. A child component css can reach up and style its own host element */
+:host {
+    display: block;
+    background-color: blue;
+    color: white;
+}
+
+/* 3b. A child component css can reach up and style its own host element with a css class rule. */
+:host(.black) {
+    display: block;
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,18 @@
+/* 1. Parent CSS can't reach into a child component. */
+h1 {
+    font-size: 30px;
+    color: red;
+}
+
+/*2. A parent component css can style a host element (e.g. <c-css-child>) */
+/* c-css-child-demo {
+    display: block;
+    background-color: green;
+    color: white;
+} */
+
+/* 4. You can apply style to an element passed into the slot from the parent component only. */
+p {
+    font-size: 20px;
+    color: chartreuse;
+}
