@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="PubSub Component B">
+        <div class="slds-var-m-around_medium">
+            Message from Component A - {messageFromA}
+        </div>
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+            type="text"
+            onkeyup={inputHandlerB}
+            class="slds-var-m-bottom_medium"
+          ></lightning-input>
+          <lightning-button 
+            variant="brand"
+            label="Publish to Component A" 
+            onclick={publishHandlerB}
+          ></lightning-button>
+        </div>
+      </lightning-card>
+</template>
