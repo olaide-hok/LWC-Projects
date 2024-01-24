@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 import MOMENT from '@salesforce/resourceUrl/moment'
-import {loadScript} from 'lightning/platformResourceLoader'
+import ANIMATE from '@salesforce/resourceUrl/animate'
+import {loadScript, loadStyle} from 'lightning/platformResourceLoader'
 
 export default class ThirdPartyFiles extends LightningElement {
     currentDate = ''
@@ -8,19 +9,21 @@ export default class ThirdPartyFiles extends LightningElement {
 
     renderedCallback() {
         if(!this.isLibLoaded) {            
-            // Promise.all([
-            //     loadScript(this, MOMENT+'/moment/moment.min.js')
-            // ]).then(() => {
-            //     this.setDateOnScreen()
+            Promise.all([
+                loadStyle(this, ANIMATE+'/animate/animate.min.css'),
+                loadScript(this, MOMENT+'/moment/moment.min.js')
+            ]).then(() => {
+                this.setDateOnScreen()
     
-            // }).catch((error) => {
-            //     console.error(error)
-            // })
-            loadScript(this, MOMENT+'/moment/moment.min.js').then(() => {
-                this.setDateOnScreen()    
             }).catch((error) => {
                 console.error(error)
             })
+            // Reference code for single instance
+            // loadScript(this, MOMENT+'/moment/moment.min.js').then(() => {
+            //     this.setDateOnScreen()    
+            // }).catch((error) => {
+            //     console.error(error)
+            // })
             this.isLibLoaded = true
         }
     }
