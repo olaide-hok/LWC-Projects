@@ -9,7 +9,7 @@ export default class LmsComponentA extends LightningElement {
     context
 
     inputHandler(event) {
-        this.inputValue = event.target.value;
+        this.inputValue = event.target.value
     }
 
     //publish(messageContext, messageChannel, message)
