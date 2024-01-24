@@ -1,3 +1,19 @@
 <template>
-    
+    <lightning-card title="User Permission Demo">
+        <template lwc:if={hasViewAllDataAvailable}>
+            <p>Hurray!! I have a user permission</p>
+        </template>
+        <template lwc:else>
+            <p>Oops!! I don't have a user permission</p>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Custom Permission Demo">
+        <template lwc:if={hasCustomPermission}>
+            <p>Hurray!! I have a custom permission</p>
+        </template>
+        <template lwc:else>
+            <p>Oops!! I don't have a custom permission</p>
+        </template>
+    </lightning-card>
 </template>
